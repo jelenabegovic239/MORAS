@@ -1,0 +1,70 @@
+CHIP zad2c
+{
+	IN in[16];
+	OUT out[16];
+	
+	PARTS:
+	Not(in = in[0], out = niN0);
+	Not(in = in[1], out = niN1);
+	Not(in = in[2], out = niN2);
+	Not(in = in[3], out = niN3);
+	Not(in = in[4], out = niN4);
+	Not(in = in[5], out = niN5);
+	Not(in = in[6], out = niN6);
+	Not(in = in[7], out = niN7);
+	Not(in = in[8], out = niN8);
+	Not(in = in[9], out = niN9);
+	Not(in = in[10], out = niN10);
+	Not(in = in[11], out = niN11);
+	Not(in = in[12], out = niN12);
+	Not(in = in[13], out = niN13);
+	Not(in = in[14], out = niN14);
+	Not(in = in[15], out = niN15);
+	
+	Add16(a[0] = niN0, b = false, out = out0);
+	
+	Mux16(a = false, b = out0, sel = niN1, out = mux1);
+	Add16(a[0] = niN1, b = mux1, out = out1);
+	
+	Mux16(a = false, b = out1, sel = niN2, out = mux2);
+	Add16(a[0] = niN2, b = mux2, out = out2);
+	
+	Mux16(a = false, b = out2, sel = niN3, out = mux3);
+	Add16(a[0] = niN3, b = mux3, out = out3);
+	
+	Mux16(a = false, b = out3, sel = niN4, out = mux4);
+	Add16(a[0] = niN4, b = mux4, out = out4);
+	
+	Mux16(a = false, b = out4, sel = niN5, out = mux5);
+	Add16(a[0] = niN5, b = mux5, out = out5);
+	
+	Mux16(a = false, b = out5, sel = niN6, out = mux6);
+	Add16(a[0] = niN6, b = mux6, out = out6);
+	
+	Mux16(a = false, b = out6, sel = niN7, out = mux7);
+	Add16(a[0] = niN7, b = mux7, out = out7);
+	
+	Mux16(a = false, b = out7, sel = niN8, out = mux8);
+	Add16(a[0] = niN8, b = mux8, out = out8);
+	
+	Mux16(a = false, b = out8, sel = niN9, out = mux9);
+	Add16(a[0] = niN9, b = mux9, out = out9);
+	
+	Mux16(a = false, b = out9, sel = niN10, out = mux10);
+	Add16(a[0] = niN10, b = mux10, out = out10);
+	
+	Mux16(a = false, b = out10, sel = niN11, out = mux11);
+	Add16(a[0] = niN11, b = mux11, out = out11);
+	
+	Mux16(a = false, b = out11, sel = niN12, out = mux12);
+	Add16(a[0] = niN12, b = mux12, out = out12);
+	
+	Mux16(a = false, b = out12, sel = niN13, out = mux13);
+	Add16(a[0] = niN13, b = mux13, out = out13);
+	
+	Mux16(a = false, b = out13, sel = niN14, out = mux14);
+	Add16(a[0] = niN14, b = mux14, out = out14);
+	
+	Mux16(a = false, b = out14, sel = niN15, out = mux15);
+	Add16(a[0] = niN15, b = mux15, out = out);
+}
